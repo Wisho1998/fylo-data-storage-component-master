@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Fylo data storage component</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <div class="background">
+    <main class="container">
+      <section class="card card--rounded">
+        <img src="/images/logo.svg" class="card__logo" alt="logo">
+        <div class="card__icons">
+          <p class="card__icon">
+            <img src="/images/icon-document.svg" class="card__imageIcon" alt="icon document">
+          </p>
+          <p class="card__icon">
+            <img src="/images/icon-folder.svg" class="card__imageIcon" alt="icon folder">
+          </p>
+          <p class="card__icon">
+            <img src="/images/icon-upload.svg" class="card__imageIcon" alt="icon upload">
+          </p>
+        </div>
+      </section>
+      <section class="card">
+        <p class="card__paragraph">
+          You’ve used <span class="card__textBold">815 GB</span> of your storage
+        </p>
+        <div class="card__progress">
+          <progress class="card__progresstag" value="815" max="1000"></progress>
+          <p class="card__ranges">
+            <span class="card__range"> 0 GB </span>
+            <span class="card__range">1000 GB</span>
+          </p>  
+        </div>
+        <button class="card__button">
+          <span class="card__unitsNumber">185</span>
+          <span class="card__unitsLeft">GB Left</span>
+        </button>
+      </section>
+    </main>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Wilmer León Chávez</a>.
+    </div>
+  </div>
+</body>
+</html>

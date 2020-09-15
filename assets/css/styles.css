@@ -1,0 +1,220 @@
+:root {
+    --gradient1: hsl(6, 100%, 80%);
+    --gradient2: hsl(335, 100%, 65%);
+    --paleblue: hsl(243, 100%, 93%);
+    --grayishblue: hsl(229, 7%, 55%);
+    --darkblue: hsl(228, 56%, 26%);
+    --verydarkblue: hsl(229, 57%, 11%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.background {
+    font-family: 'Raleway', sans-serif;
+    height: 100vh;
+    background-image: url(/images/bg-mobile.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 13rem 11.5rem;
+    row-gap: .1rem;
+    margin: 0 2rem;
+}
+
+.card {
+    color: #ffffff;
+    background-color: var(--darkblue);
+    border-radius: .6rem;
+    margin-bottom: 20px;
+    padding: 2rem;
+    position: relative;
+}
+
+.card--rounded {
+    border-radius: .6rem 5rem .6rem .6rem;
+}
+
+.card__logo {
+    margin-bottom: 2rem;
+}
+
+.card__icons {
+    display: flex;
+    justify-content: space-between;
+    width: 73%;
+}
+
+.card__icon {
+    background-color: var(--verydarkblue);
+    border-radius: .5rem;
+    width: 3rem;
+    height: 3rem;
+    position: relative;
+}
+
+.card__imageIcon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.card__paragraph {
+    font-size: .85rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.card__textBold {
+    font-weight: 700;
+}
+
+.card__progresstag {
+    margin-top: 0 !important;
+    margin-bottom: 1rem !important;
+    display: block;
+    width: 100%;
+    height: 1.2rem;
+    margin: 2em auto;
+    padding: .15rem;
+    background-color: var(--verydarkblue);
+    border-radius: .5rem;
+    position: relative;
+}
+
+.card__progresstag::-moz-progress-bar {
+    border-radius: .5rem;
+    background-color: var(--verydarkblue);
+}
+
+.card__progresstag::-webkit-progress-bar {
+    border-radius: .5rem;
+    background-color: var(--verydarkblue);
+}
+
+.card__progresstag::-webkit-progress-value {
+    border-radius: .5rem;
+    background: linear-gradient(to left, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+}
+
+/* point white in proogress bar  */
+
+.card__progresstag::after {
+    content: "";
+    position: absolute;
+    right: 18.6%;
+    margin-right: .25rem;
+    top: .3rem;
+    width: .6rem;
+    height: .6rem;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+.card__ranges {
+    display: flex;
+    justify-content: space-between;
+    font-size: .8rem;
+    margin-bottom: 1rem;
+}
+
+.card__button {
+    background-color: #ffffff;
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    border: none;
+    padding: .7rem 1rem;
+    border-radius: .6rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--grayishblue);
+    display: flex;
+    align-items: center;
+}
+
+.card__unitsNumber {
+    font-family: 'Raleway', sans-serif;
+    color: var(--verydarkblue);
+    font-size: 2.5rem;
+    margin-right: .8rem;
+}
+
+.card__unitsLeft {
+    font-size: .8rem;
+}
+
+/* Media queries  */
+
+@media(min-width:1440px) {
+    body {
+        background-color: var(--verydarkblue);
+    }
+    .background {
+        background-image: url(/images/bg-desktop.png);
+        background-position: bottom;
+        background-size: contain;
+    }
+    .container {
+        margin: 0 18rem;
+        grid-template-columns: 3fr 6fr;
+        grid-template-rows: 1fr;
+    }
+    .card {
+        margin-bottom: 0;
+    }
+    .card:nth-of-type(1) {
+        margin-right: 20px;
+    }
+    .card:nth-of-type(2) {
+        height: 5rem;
+        align-self: end;
+    }
+    .card__paragraph {
+        text-align: left;
+    }
+    .card__button {
+        position: absolute;
+        right: -50%;
+        transform: translateX(5.5rem) translateY(-11rem);
+        position: relative;
+    }
+    .card__button::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-right: 2rem solid #ffffff;
+        border-bottom: 2rem solid transparent;
+        right: 0;
+        top: 3.5rem;
+    }
+}
+
+/* Frontend Mentor attribution */
+
+.attribution {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    text-align: center;
+    color: hsl(0, 0%, 100%);
+}
+
+.attribution a {
+    color: hsl(250, 47%, 71%);
+}

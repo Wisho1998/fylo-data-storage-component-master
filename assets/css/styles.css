@@ -53,7 +53,7 @@
 .card__icons {
     display: flex;
     justify-content: space-between;
-    width: 73%;
+    width:75%;
 }
 
 .card__icon {
@@ -184,6 +184,9 @@
     }
     .card__paragraph {
         text-align: left;
+    }
+    .card__icons{
+        width: 85%;
     }
     .card__button {
         position: absolute;
